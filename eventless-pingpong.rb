@@ -1,5 +1,4 @@
-require 'socket'
-require 'thread'
+require 'eventless'
 
 port = ARGV[0] || 8080
 
@@ -23,7 +22,7 @@ end
 
 loop do
   client, _ = sock.accept
-  Thread.new do
+  Eventless.spawn do
     total_connections += 1
     client.write("HTTP/1.0 200 OK\r\nContent-Type: text/plain\r\nContent-Length: 5\r\n\r\nPong!")
     client.close
