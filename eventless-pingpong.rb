@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'eventless'
 
 port = ARGV[0] || 8080
@@ -7,7 +8,6 @@ sock.bind(Socket.pack_sockaddr_in(port, '0.0.0.0'))
 sock.listen(50000)
 
 total_connections = 0
-
 
 puts "Listening on #{port}"
 

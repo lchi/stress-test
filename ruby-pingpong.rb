@@ -9,7 +9,6 @@ sock.listen(50000)
 
 total_connections = 0
 
-
 puts "Listening on #{port}"
 
 trap("INT") do
