@@ -1,1 +1,1 @@
-gem 'eventless', :git => "https://lchi@github.com/lchi/eventless.git"
+gem 'eventless', :git => "git://github.com/lchi/eventless.git"
